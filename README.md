@@ -94,8 +94,5 @@ Web sitesini başlattıktan sonra, tarayıcınızda `http://localhost:3000` adre
 
 ## Lisans
 
-Bu proje [Lisans Adı] lisansı altında lisanslanmıştır.
+Bu proje [MIT Lisans] lisansı altında lisanslanmıştır.
 
----
-
-Bu Markdown dosyası, projenizin temel yapısını ve içeriğini yansıtmaktadır. İhtiyaçlarınıza göre bu dosyayı düzenleyebilir ve geliştirebilirsiniz. Özellikle "Ekran Görüntüleri" bölümüne projenizin görsellerini eklemeyi unutmayın. Ayrıca, `[repo_url]` ve `[Lisans Adı]` gibi yerleri kendi projenize uygun şekilde doldurmanız gerekmektedir.
