@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        /* Basic styling & centering everything  */
+        .social-media-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        ul.social-media-icons {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul.social-media-icons li {
+            margin: 0 15px; /* İkonlar arasına daha fazla 
+                                 mesafe koymak için */
+            position: relative;
+        }
+        ul.social-media-icons li a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px; /* İkon boyutunu küçülttüm */
+            height: 40px; /* İkon boyutunu küçülttüm */
+            background: #cecaca;
+            text-align: center;
+            transform: rotate(318deg) skew(199deg) translate(0, 0);
+            transition: .5s;
+            box-shadow: -10px 10px 5px rgba(0, 0, 0, .5);
+            position: relative;
+            line-height: 40px; /* İkonları ortalamak için */
+            font-size: 20px; /* İkon boyutunu küçülttüm */
+            color: #262626;
+        }
+
+        ul.social-media-icons li a .fa {
+            transition: .5s;
+        }
+        ul.social-media-icons li a:before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: -10px;
+            height: 100%;
+            width: 10px;
+            background: #8a6f6f;
+            transition: .5s;
+            transform: rotate(0deg) skewY(-45deg);
+        }
+        ul.social-media-icons li a:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: -5px;
+            height: 10px;
+            width: 100%;
+            background: #8a6f6f;
+            transition: .5s;
+            transform: rotate(0deg) skewX(-45deg);
+        }
+
+        ul.social-media-icons li a:hover {
+            transform: skew(5deg) translate(10px, -25px);
+            box-shadow: -25px 25px 25px rgba(0, 0, 0, .5);
+            color: #fff; /* İkonlar beyaz renge dönüşsün */
+        }
+
+        ul.social-media-icons li:hover:nth-child(1) a {
+            background: #3b5998;
+        }
+
+        ul.social-media-icons li:hover:nth-child(1) a:before {
+            background: #365492;
+        }
+
+        ul.social-media-icons li:hover:nth-child(1) a:after {
+            background: #4a69ad;
+        }
+
+        ul.social-media-icons li:hover:nth-child(2) a {
+            background: #00aced;
+        }
+
+        ul.social-media-icons li:hover:nth-child(2) a:before {
+            background: #097aa5;
+        }
+
+        ul.social-media-icons li:hover:nth-child(2) a:after {
+            background: #53b9e0;
+        }
+
+        ul.social-media-icons li:hover:nth-child(3) a {
+            background: #dd4b39;
+        }
+
+        ul.social-media-icons li:hover:nth-child(3) a:before {
+            background: #b33a2b;
+        }
+
+        ul.social-media-icons li:hover:nth-child(3) a:after {
+            background: #e66a5a;
+        }
+
+        ul.social-media-icons li:hover:nth-child(4) a {
+            background: #e4405f;
+        }
+
+        ul.social-media-icons li:hover:nth-child(4) a:before {
+            background: #d81c3f;
+        }
+
+        ul.social-media-icons li:hover:nth-child(4) a:after {
+            background: #e46880;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="brand">
+                <img src="images/yemekLogo.png" alt="Logo" class="logo">
+                <h2>VOLVOX</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="iletişim.html">İletişim</a></li>
+                    <li><a href="hakkımızda.html">Hakkımızda</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="contact-container">
+        <div class="right">
+            <h1 class="title">Giriş Yap</h1>
+            <img class="logo" src="images/yemekLogo.png" alt="">
+            <div class="form-container" id="login-form">
+                <div class="username">
+                    <img class="icon email-icon" src="icons/email.svg" alt="">
+                    <input type="email" class="user-input" id="email" placeholder="E-Mail">
+                </div>
+                <div class="password">
+                    <img class="icon password-icon" src="icons/password lock.svg" alt="">
+                    <input type="password" class="pass-input" id="password" placeholder="Password">
+                </div>
+                <div class="keepme">
+                    <input type="checkbox" id="keepMeLoggedIn" checked="true">
+                    Beni Hatırla
+                </div>
+                <button type="button" id="submitButton">Giriş</button>
+                <a href="#" class="link" id="forgotPasswordLink">Şifremi Unuttum</a>
+            </div>
+
+            <div class="form-container" id="forgot-password-form" style="display: none;">
+                <h2 class="title">Şifreyi Sıfırla</h2>
+                <div class="username">
+                    <img class="icon email-icon" src="icons/email.svg" alt="">
+                    <input type="email" class="user-input" id="resetEmail" placeholder="E-Mail">
+                </div>
+                <div class="password">
+                    <img class="icon password-icon" src="icons/password lock.svg" alt="">
+                    <input type="password" class="pass-input" id="newPassword" placeholder="New Password">
+                </div>
+                <button type="button" id="resetButton">Şifreyi Sıfırla</button>
+                <a href="#" class="link" id="backToLoginLink">Giriş'e Dön</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hakkımızda -->
+    <section id="about" class="about-section">
+        <h2 class="three-d-title">Hakkımızda</h2>
+        <p>VOLVOX Restorant
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Ad aliquid provident sed. Quod aut unde perspiciatis aliquid eum ipsum magnam adipisci facilis architecto amet
+            . Dolorum commodi veritatis explicabo ratione nobis deleniti magni mollitia, nostrum atque! Velit aperiam, 
+            rem tempore exercitationem sit error accusamus eaque voluptatem corporis magnam harum earum. Quas, eaque quam.
+            Adipisci ab cumque delectus quasi hic distinctio illum sint, non quas, corporis obcaecati aliquid.
+            Reprehenderit, vel. Aspernatur, ducimus. Veniam consequatur quam dignissimos asperiores quidem alias facilis,
+            quibusdam, impedit consectetur quas voluptate quis? Hic quae qui libero, perferendis
+            impedit esse vitae mollitia aliquam iure dolores, voluptate tempora nulla iste?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda in rerum eaque
+            maiores enim consequatur dolores vero. Corrupti aliquid expedita reiciendis officia obcaecati,
+            earum temporibus alias quisquam adipisci deleniti!</p>
+    </section>
+
+    <!-- İletişim  -->
+    <section id="contact" class="contact-section">
+        <div class="contact-info">
+            <div class="logo-contact">
+                <img src="images/yemekLogo.png" alt="Logo">
+                <p>VOLVOX Restorant
+                    Sıra dışı lezzetlerin atölyesi..</p>
+            </div>
+            <div class="contact-details">
+                <h3>Bize Ulaşın</h3>
+                <p><i class="fas fa-phone"></i> +90 537 680 41 65</p>
+                <p><i class="fas fa-envelope"></i> info@cosmos.web.tr</p>
+            </div>
+            <div class="quick-access">
+                <h3>Hızlı Erişim</h3>
+                <ul>
+                    <li><a href="iptal_iade.html">İptal & İade Koşulları</a></li>
+                    <li><a href="mesafeli_satis.html">Mesafeli Satış Sözleşmesi</a></li>
+                    <li><a href="gizlilik_politikasi.html">Gizlilik Politikası</a></li>
+                    <li><a href="cerez_politikasi.html">Çerez Politikası</a></li>
+                </ul>
+            </div>
+            <div class="tags">
+                <h3>Etiketler</h3>
+                <ul>
+                    <li><a href="kalite_politikamiz.html">Kalite Politikamız</a></li>
+                    <li><a href="insan_kaynaklari.html">İnsan Kaynakları</a></li>
+                    <li><a href="kvkk.html">KVKK</a></li>
+                    <li><a href="hakkımızda.html">Hakkımızda</a></li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <div class="social-media-container">
+            <ul class="social-media-icons">
+                <li>
+                    <a href="#">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-google-plus-g" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        &nbsp;
+        <div class="copyright">
+            <p>Copyright © VOLVOX Restaurant 2024. Tüm hakları saklıdır</p>
+    </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" 
+            crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+    
+    
+</body>
+
+</html>

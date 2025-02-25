@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="home_style1.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="brand">
+                <img src="images/yemekLogo.png" alt="Logo" class="logo">
+                <h2 class="brand-name">VOLVOX</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="iletişim.html">İletişim</a></li>
+                    <li><a href="hakkımızda.html">Hakkımızda</a></li>
+                    <li class="user-info">
+                        <img src="images/user-icon.png" alt="User Icon" id="userIcon">
+                        <span id="userName">Mehmet Ali Bilici</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="grid-container">
+            <div class="grid-row">
+                <section id="desserts" class="clickable-section" onclick="location.href='tatlılar.html'">
+                    <img src="images/tatlılar.jpg" alt="Tatlılar" class="section-image">
+                    <h2>Tatlılar</h2>
+                    <p>Burada en lezzetli tatlıları bulabilirsiniz.</p>
+                </section>
+    
+                <section id="drinks" class="clickable-section" onclick="location.href='icecek.html'">
+                    <img src="images/icecek.jpg" alt="İçecekler" class="section-image">
+                    <h2>İçecekler</h2>
+                    <p>Ferahlatıcı içeceklerimizle serinleyin.</p>
+                </section>
+            </div>
+    
+            <div class="grid-row">
+                <section id="meals" class="clickable-section" onclick="location.href='kahvaltılıklar.html'">
+                    <img src="images/kahvaltılık.jpg" alt="Kahvaltılıklar" class="section-image">
+                    <h2>Kahvaltılıklar</h2>
+                    <p>Lezzetli kahvaltılıklarımızla karnınızı doyurun.</p>
+                </section>
+    
+                <section id="snacks" class="clickable-section" onclick="location.href='atıstırmalık.html'">
+                    <img src="images/atıstırmalık.png" alt="Atıştırmalıklar" class="section-image">
+                    <h2>Atıştırmalıklar</h2>
+                    <p>Hafif atıştırmalıklarımızla açlığınızı giderin.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+</body>
+
+</html>

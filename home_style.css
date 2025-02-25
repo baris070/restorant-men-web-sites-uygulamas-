@@ -1,0 +1,168 @@
+/* Genel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2e2a26;
+    color: #d4a76a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    background-color: #1f1c18; 
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Marka alanı, logo ve yazı yerleşimi */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.brand h2 {
+    color: #d4a76a;
+    font-size: 2em;
+}
+/* Başlıklar için stil */
+h2 {
+    font-size: 2em;
+    color: #d4a76a;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.brand .logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Navigasyon menüsü */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px; 
+    align-items: center;
+    margin-left: auto;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #d4a76a;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.user-info img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#userName {
+    color: #d4a76a;
+    font-size: 1.1em;
+}
+
+/* Ana içerik alanı */
+main {
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 150px;
+}
+
+/* Grid Düzeni */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+    color: #333;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card .info {
+    padding: 25px;
+}
+
+.card .info h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card .info .price {
+    background-color: #d4a76a;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 1.2em;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Alt İçerik (Sütlü Tatlılar vs.) */
+.flex-container-below {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
